@@ -71,14 +71,20 @@ function Login() {
   };
 
   return (
+     
+    
     <div className="login-container">
       <div className="overlay">
-
+   
         <form
           className="login-box"
           onSubmit={handleSubmit}
         >
-
+             <img
+  src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+  alt="Netflix"
+  className="netflix-logo"
+/>
           <h1>Sign In</h1>
 
           {/* Error Message */}
@@ -94,7 +100,7 @@ function Login() {
               {success}
             </p>
           )}
-
+        
           {/* Email */}
           <input
             type="email"
@@ -124,6 +130,7 @@ function Login() {
       </div>
     </div>
   );
-}
+};
+
 
 export default Login;
