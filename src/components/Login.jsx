@@ -30,7 +30,7 @@ function Login() {
 
       // API Request
       const response = await axios.post(
-        "https://netflix-clone-mern-w35j.onrender.com",
+        "https://netflix-clone-mern-w35j.onrender.com/login",
         {
           email,
           password,
