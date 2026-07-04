@@ -1,31 +1,65 @@
  import "./Dashboard.css";
 
-const Dashboard = () => {
+import  StrangerThings from "../assets/img1.jpg";
+import ChastityHigh from "../assets/img2.jpg";
+import Beast from "../assets/img3.jpg";
+import  Archer from "../assets/img4.jpg";
+
+function Dashboard() {
+
+  const movies = [
+    StrangerThings,
+     ChastityHigh,
+     Beast,
+     Archer,
+   ];
+
   return (
     <div className="dashboard">
-      
-      <div className="navbar">
+
+      <nav className="navbar">
         <h1 className="logo">NETFLIX</h1>
+
+        <ul>
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>My List</li>
+        </ul>
+      </nav>
+
+      <div
+        className="banner"
+        style={{ backgroundImage: `url(${StrangerThings})` }}
+      >
+        <div className="banner-content">
+          <h1>Stranger Things</h1>
+
+          <p>
+            Experience thrilling adventures and explore
+            your favorite movies and TV shows.
+          </p>
+
+          <button>▶ Play</button>
+        </div>
       </div>
 
-      <div className="hero">
-        <h1>Unlimited movies, TV shows and more.</h1>
+      <div className="row">
+        <h2>Popular on Netflix</h2>
 
-        <p>Watch anywhere. Cancel anytime.</p>
-
-        <button className="watch-btn">
-          Watch Now
-        </button>
-      </div>
-
-      <div className="movies-section">
-        <h2>Trending Now</h2>
-
-      
+        <div className="movies">
+          {movies.map((movie, index) => (
+            <img
+              key={index}
+              src={movie}
+              alt={`Movie ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
     </div>
   );
-};
+}
 
 export default Dashboard;
