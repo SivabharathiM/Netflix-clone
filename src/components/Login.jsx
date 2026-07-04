@@ -30,7 +30,7 @@ function Login() {
 
       // API Request
       const response = await axios.post(
-        "http://localhost:5000/login",
+        "https://netflix-clone-mern-w35j.onrender.com",
         {
           email,
           password,
